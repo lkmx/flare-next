@@ -1,0 +1,15 @@
+{
+  "name": "@lkmx/flare",
+  "version": "0.0.1",
+  "description": "Flare Design System",
+  "main": "src/sass/flare.scss",
+  "keywords": [
+    "flare",
+    "design",
+    "system",
+    "sass",
+    "vuejs"
+  ],
+  "license": "ISC",
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
+}
