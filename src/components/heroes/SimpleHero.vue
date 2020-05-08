@@ -1,9 +1,7 @@
 <template>
   <section class="simple-hero">
     <single-column class="simple-hero__content">
-      <runtime-remark>
         <slot></slot>
-      </runtime-remark>
     </single-column>
   </section>
 </template>
