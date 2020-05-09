@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <no-column class="header__content">
-      <button class="header__nav-toggle" @click="toggleNav">
+      <button class="header__nav-toggle" @click="toggleNav" aria-label="Nav toggle">
         <slot name="nav-toggle"></slot>
       </button>
       <g-link class="header__logo" to="/">
@@ -10,7 +10,7 @@
       <nav class="main-nav" :class="{ 'main-nav--open': isNavOpen }">
         <div class="main-nav__primary">
           <slot name="navigation"></slot>
-          <button class="main-nav__close-button" @click="toggleNav">Close</button>
+          <button class="main-nav__close-button" @click="toggleNav" aria-label="Close">Close</button>
         </div>
       </nav>
       <div class="header__actions">
