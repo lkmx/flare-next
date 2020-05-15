@@ -54,7 +54,7 @@
       grid-template-rows: 100%;
 
       @include respond-to("medium and down") {
-        grid-template-columns: rem($header-lateral-column-width) 1fr rem($header-lateral-column-width);
+        grid-template-columns: rem($header-lateral-column-mobile-width) 1fr rem($header-lateral-column-mobile-width);
       }
     }
 
