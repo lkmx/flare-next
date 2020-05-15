@@ -54,7 +54,7 @@
       grid-template-rows: 100%;
 
       @include respond-to("medium and down") {
-        grid-template-columns: rem($header-nav-icon-width) 1fr rem(46px);
+        grid-template-columns: rem($header-lateral-column-width) 1fr rem($header-lateral-column-width);
       }
     }
 
@@ -93,7 +93,7 @@
           left: 0;
           display: block;
           background-color: $header-nav-default-color;
-          width: calc(100% - #{$gutter-xxxlarge});
+          width: $header-nav-mobile-width;
           height: 100%;
           z-index: 1;
           border-right: 1px solid black;
