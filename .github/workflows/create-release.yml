@@ -11,11 +11,12 @@ jobs:
     steps:
         - uses: actions/checkout@v2
         - uses: actions/setup-node@v1
+        - uses: olegtarasov/get-tag@v2
           with:
             node-version: 12
             registry-url: https://npm.pkg.github.com/
             scope: "@lkmx"
-        - run: npm version ${{ github.ref }}
+        - run: npm version ${{ steps.tagName.outputs.tag }}
         - run: npm publish
           env:
             NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
