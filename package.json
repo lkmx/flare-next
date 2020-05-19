@@ -1,6 +1,6 @@
 {
   "name": "@lkmx/flare",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "Flare Design System",
   "main": "src/sass/flare.scss",
   "keywords": [
@@ -11,5 +11,7 @@
     "vuejs"
   ],
   "license": "ISC",
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
 }
