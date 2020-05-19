@@ -14,7 +14,9 @@ jobs:
             node-version: 12
             registry-url: https://npm.pkg.github.com/
             scope: "@lkmx"
+        - run: git config --global user.email "$GITHUB_ACTOR@lkmx.io" && git config --global user.name "$GITHUB_ACTOR"
         - run: npm version minor
+        - run: git push --tags && git push
         - run: npm publish
           env:
             NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
