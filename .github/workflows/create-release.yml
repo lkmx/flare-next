@@ -15,6 +15,7 @@ jobs:
             registry-url: https://npm.pkg.github.com/
             scope: "@lkmx"
         - run: git config --global user.email "$GITHUB_ACTOR@lkmx.io" && git config --global user.name "$GITHUB_ACTOR"
+        - run: npm config set tag-version-prefix ''
         - run: npm version minor
         - run: git push --tags && git push
         - run: npm publish
