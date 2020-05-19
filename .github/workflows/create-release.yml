@@ -9,21 +9,21 @@ jobs:
    name: Create Release
    runs-on: ubuntu-latest
    steps:
-     - name: Checkout code
-       uses: actions/checkout@v2
      - name: Build artifact
-       uses: actions/setup-node@v1
+     - uses: actions/checkout@v2
+     - uses: actions/setup-node@v1
        with:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
           scope: "@lkmx"
-     - run: npm version minor
+     - run: npm version ${{ github.ref }}
      - run: npm publish
        env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
      - name: Create Release
        id: create_release
-       uses: actions/create-release@v1
+     - uses: actions/checkout@v2
+     - uses: actions/create-release@v1
        env: 
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
        with: 
