@@ -1,4 +1,4 @@
-@import "../tokens/screen";
+@import "../guides/screen";
 
 @function rem($size) {
   $remSize: $size / $base-size;

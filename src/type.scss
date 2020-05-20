@@ -1,7 +1,7 @@
 @import "functions/rem";
 
-@import "tokens/screen";
-@import "tokens/text";
+@import "guides/screen";
+@import "guides/text";
 
 @mixin text-style($text-size, $text-font, $text-weight, $text-color, $text-line, $text-margin) {
   font-size: $text-size;
