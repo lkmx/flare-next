@@ -13,7 +13,7 @@ $column-width-xxlarge:   ($breakpoint-xlarge - $gutter * 2);
 $column-width-xxxlarge:  ($breakpoint-xxlarge - $gutter * 2);
 
 
-// Columns
+// Slim
 $slim-column-width-xxsmall:   100%;
 $slim-column-width-xsmall:    100%;
 $slim-column-width-small:     100%;
@@ -22,3 +22,9 @@ $slim-column-width-large:     $breakpoint-large / $golden-ratio;
 $slim-column-width-xlarge:    $breakpoint-xlarge / $golden-ratio;
 $slim-column-width-xxlarge:   $breakpoint-xlarge / $golden-ratio;
 $slim-column-width-xxxlarge:  $breakpoint-xxlarge / $golden-ratio;
+
+// Twin
+$twin-column-breakpoint-large: 100%;
+$twin-column-breakpoint-xlarge: 100%;
+$twin-column-breakpoint-xxlarge: rem($breakpoint-xxlarge / 2);
+$twin-column-breakpoint-xxxlarge: rem($breakpoint-xxxlarge / 2);
