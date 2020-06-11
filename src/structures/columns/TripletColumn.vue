@@ -22,13 +22,14 @@
 .triplets {
   width: 100%;
   display: grid;
+  grid-column-gap: $triplet-column-gap;
 
   @include respond-to("medium and up") {
     $responsive-breakpoints: (
-      "large": rem($breakpoint-large / 3),
-      "xlarge": rem($breakpoint-xlarge / 3),
-      "xxlarge": rem($breakpoint-xxlarge / 3),
-      "xxxlarge": rem($breakpoint-xxxlarge / 3)
+      "large": $triplet-column-breakpoint-large,
+      "xlarge": $triplet-column-breakpoint-xlarge,
+      "xxlarge": $triplet-column-breakpoint-xxlarge,
+      "xxxlarge": $triplet-column-breakpoint-xxxlarge
     );
 
     @each $breakpoint, $breakpoint-width in $responsive-breakpoints {
