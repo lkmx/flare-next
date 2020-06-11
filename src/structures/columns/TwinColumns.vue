@@ -47,6 +47,13 @@
           width: $breakpoint-width;
         }
       }
+
+      &--start {
+	justify-self: right;
+      }
+      &--end {
+	justify-self: left;
+      }
     }
   }
 </style>
