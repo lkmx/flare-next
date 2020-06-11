@@ -1,11 +1,11 @@
 <template>
   <div class="twin-columns">
     <div class="twins-section twins-section--start">
-      <div class="twins-column left twins-column--end">
+      <div class="twins-column twins-column--start">
         <slot name="left"></slot>
       </div>
     </div>
-    <div class="twins-section right twins-section--end">
+    <div class="twins-section twins-section--end">
       <div class="twins-column twins-column--end">
         <slot name="right"></slot>
       </div>
@@ -29,7 +29,6 @@
     .twins-section {
       display: grid;
     }
-    
 
     .twins-column {
       $responsive-breakpoints: (
@@ -46,32 +45,6 @@
       @each $breakpoint, $breakpoint-width in $responsive-breakpoints {
         @include respond-to($breakpoint) {
           width: $breakpoint-width;
-        }
-      }
-
-      @include respond-to("large and up") {
-        &--start {
-          color: white;
-          justify-self: end;
-          padding: 3rem;
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          h2, h3 {
-          color: white;
-          grid-column: span 4;
-          }
-        }
-        &--end {
-          justify-self: start;
-        }
-      }
-
-      @include respond-to("medium and down") {
-        &--start {
-          padding: 3rem;
-        }
-        &--end {
-          height: $radius-xxxlarge * 5;
         }
       }
     }
