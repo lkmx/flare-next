@@ -37,6 +37,7 @@
 
         &-column {
           width: $breakpoint-width;
+          padding: 0 $columns-padding;
 
           &--start {
             justify-self: end;

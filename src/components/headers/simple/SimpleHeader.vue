@@ -1,9 +1,9 @@
 <template>
   <header class="header">
     <no-column class="header__content">
-      <button class="header__nav-toggle" @click="toggleNav" aria-label="Nav toggle">
+      <a class="header__nav-toggle" @click="toggleNav" aria-label="Navigation toggle">
         <slot name="nav-toggle"></slot>
-      </button>
+      </a>
       <g-link class="header__logo" to="/">
         <slot name="logo"></slot>
       </g-link>
@@ -38,9 +38,12 @@
 
 <style lang="scss">
   .header {
-    position: fixed;
-    z-index: 10000;
-    top: 0;
+    position: $header-position;
+    @if($header-position == fixed) {
+      z-index: 10000;
+      top: 0;
+    }
+
     color: $header-text-default-color;
     width: 100%;
     height: rem($header-height);
@@ -49,7 +52,6 @@
     &__content {
       height: 100%;
       display: grid;
-      padding: 0 $gutter;
       grid-template-columns: rem($header-logo-space-width) 1fr rem($header-actions-space-width);
       grid-template-rows: 100%;
 

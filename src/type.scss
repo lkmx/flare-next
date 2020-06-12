@@ -1,16 +1,9 @@
 @import "functions/rem";
+@import "functions/text";
 
 @import "guides/screen";
 @import "guides/text";
 
-@mixin text-style($text-size, $text-font, $text-weight, $text-color, $text-line, $text-margin) {
-  font-size: $text-size;
-  font-family: $text-font;
-  font-weight: $text-weight;
-  color: $text-color;
-  line-height: $text-line;
-  margin: $text-margin;
-}
 
 ::selection {
   background: $text-selection-color;
@@ -20,12 +13,11 @@
 }
 
 html {
-  font-family: $text-font;
   font-size: $base-size;
 }
 
 body {
-  font-family: $base-size;
+  font-family: $text-font;
 }
 
 

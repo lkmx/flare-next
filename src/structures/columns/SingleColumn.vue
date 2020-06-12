@@ -12,12 +12,9 @@
 
 <style lang="scss" scoped>
   .single-column {
-    display: grid;
-    grid-auto-flow: row;
-    grid-auto-rows: min-content;
+    @include columns-common;
 
     margin: 0 auto;
-    max-width: 100%;
     $responsive-breakpoints: (
             "xxsmall":  $column-width-xxsmall,
             "xsmall":   $column-width-xsmall,

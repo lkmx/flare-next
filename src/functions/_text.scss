@@ -1,0 +1,8 @@
+@mixin text-style($text-size, $text-font, $text-weight, $text-color, $text-line, $text-margin) {
+  font-size: $text-size;
+  font-family: $text-font;
+  font-weight: $text-weight;
+  color: $text-color;
+  line-height: $text-line;
+  margin: $text-margin;
+}

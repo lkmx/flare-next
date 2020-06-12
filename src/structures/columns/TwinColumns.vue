@@ -28,9 +28,14 @@
 
     .twins-section {
       display: grid;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
 
     .twins-column {
+      padding: 0 $columns-padding;
+
       $responsive-breakpoints: (
               "xxsmall": 100%,
               "xsmall": 100%,
@@ -49,10 +54,10 @@
       }
 
       &--start {
-	justify-self: right;
+	      justify-self: right;
       }
       &--end {
-	justify-self: left;
+	      justify-self: left;
       }
     }
   }

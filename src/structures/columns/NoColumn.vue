@@ -12,9 +12,9 @@
 
 <style lang="scss" scoped>
   .no-column {
-    display: grid;
-    grid-auto-flow: row;
-    grid-auto-rows: min-content;
+    @include columns-common;
+    
     width: 100%;
+
   }
 </style>
