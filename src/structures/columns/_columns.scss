@@ -5,13 +5,10 @@
 $columns-padding: $gutter !default;
 
 @mixin columns-common {
-  max-width: 100%;
   display: grid;
   grid-auto-flow: row;
   grid-auto-rows: min-content;
-
-  padding-left: $columns-padding;
-  padding-right: $columns-padding;
+  max-width: 100%;
 }
 
 
@@ -20,30 +17,18 @@ $column-width-xxsmall:   100%;
 $column-width-xsmall:    100%;
 $column-width-small:     100%;
 $column-width-medium:    100%;
-$column-width-large:     ($breakpoint-large - $gutter * 2);
-$column-width-xlarge:    ($breakpoint-xlarge - $gutter * 2);
-$column-width-xxlarge:   ($breakpoint-xlarge - $gutter * 2);
-$column-width-xxxlarge:  ($breakpoint-xxlarge - $gutter * 2);
+$column-width-large:     $breakpoint-large;
+$column-width-xlarge:    $breakpoint-xlarge;
+$column-width-xxlarge:   $breakpoint-xlarge;
+$column-width-xxxlarge:  $breakpoint-xxlarge;
 
 
 // Slim
 $slim-column-width-xxsmall:   100%;
 $slim-column-width-xsmall:    100%;
 $slim-column-width-small:     100%;
-$slim-column-width-medium:    100%;
+$slim-column-width-medium:    $breakpoint-medium / $golden-ratio;
 $slim-column-width-large:     $breakpoint-large / $golden-ratio;
 $slim-column-width-xlarge:    $breakpoint-xlarge / $golden-ratio;
 $slim-column-width-xxlarge:   $breakpoint-xlarge / $golden-ratio;
 $slim-column-width-xxxlarge:  $breakpoint-xxlarge / $golden-ratio;
-
-// Twin
-$twin-column-breakpoint-large: rem($column-width-large / 2);
-$twin-column-breakpoint-xlarge: rem($column-width-xlarge / 2);
-$twin-column-breakpoint-xxlarge: rem($column-width-xxlarge / 2);
-$twin-column-breakpoint-xxxlarge: rem($column-width-xxxlarge / 2);
-
-// Triplet
-$triplet-column-breakpoint-large: rem($column-width-large / 3);
-$triplet-column-breakpoint-xlarge: rem($column-width-xlarge / 3);
-$triplet-column-breakpoint-xxlarge: rem($column-width-xxlarge / 3);
-$triplet-column-breakpoint-xxxlarge: rem($column-width-xxxlarge / 3);

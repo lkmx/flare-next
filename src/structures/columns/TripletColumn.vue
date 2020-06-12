@@ -23,7 +23,29 @@
   width: 100%;
   display: grid;
 
-  @include respond-to("medium and up") {
+  // Triplet column dimensions
+  $triplet-column-breakpoint-medium: rem($slim-column-width-medium);
+  $triplet-column-breakpoint-large: rem($column-width-large / 3);
+  $triplet-column-breakpoint-xlarge: rem($column-width-xlarge / 3);
+  $triplet-column-breakpoint-xxlarge: rem($column-width-xxlarge / 3);
+  $triplet-column-breakpoint-xxxlarge: rem($column-width-xxxlarge / 3);
+
+  @include respond-to("small and down") {
+    grid-template-columns: 1fr;
+
+    &-column {
+      padding: 0 $columns-padding;
+    }
+  }
+  @include respond-to("medium") {
+    grid-template-columns: $triplet-column-breakpoint-medium;
+    justify-content: center;
+
+    &-column {
+      padding: 0 $columns-padding;
+    }
+  }
+  @include respond-to("large and up") {
     $responsive-breakpoints: (
       "large": $triplet-column-breakpoint-large,
       "xlarge": $triplet-column-breakpoint-xlarge,

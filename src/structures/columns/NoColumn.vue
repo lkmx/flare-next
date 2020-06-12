@@ -13,7 +13,8 @@
 <style lang="scss" scoped>
   .no-column {
     @include columns-common;
-    
+    padding-left: $columns-padding;
+    padding-right: $columns-padding;
     width: 100%;
 
   }

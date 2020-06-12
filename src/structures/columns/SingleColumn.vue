@@ -13,6 +13,8 @@
 <style lang="scss" scoped>
   .single-column {
     @include columns-common;
+    padding-left: $columns-padding;
+    padding-right: $columns-padding;
 
     margin: 0 auto;
     $responsive-breakpoints: (

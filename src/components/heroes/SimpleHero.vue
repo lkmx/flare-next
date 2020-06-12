@@ -9,7 +9,7 @@
 <script>
   export default {
     name: 'SimpleHero',
-    props: [ "backgroundImage" ],
+    props: [ "background" ],
   };
 </script>
 
