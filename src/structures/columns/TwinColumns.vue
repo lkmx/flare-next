@@ -40,8 +40,6 @@
     }
 
     .twins-column {
-      padding: 0 $columns-padding;
-
       $responsive-breakpoints: (
               "xxsmall": 100%,
               "xsmall": 100%,
@@ -61,9 +59,13 @@
 
       &--start {
 	      justify-self: right;
+        padding-left: $columns-padding;
+        padding-right: $columns-padding * $golden-ratio;
       }
       &--end {
 	      justify-self: left;
+        padding-left: $columns-padding * $golden-ratio;
+        padding-right: $columns-padding;
       }
     }
   }
