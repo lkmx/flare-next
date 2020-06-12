@@ -22,7 +22,6 @@
 .triplets {
   width: 100%;
   display: grid;
-  grid-column-gap: $triplet-column-gap;
 
   @include respond-to("medium and up") {
     $responsive-breakpoints: (
