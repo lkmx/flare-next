@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <single-column><slot></slot></single-column>
+    <slot></slot>
   </footer>
 </template>
 
@@ -10,7 +10,6 @@
     background-color: $footer-background-color;
     min-height: $footer-min-height;
     padding: $footer-vertical-padding 0;
-    text-align: right;
   }
 </style>
 
