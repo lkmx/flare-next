@@ -58,14 +58,30 @@
       }
 
       &--start {
-	      justify-self: right;
-        padding-left: $columns-padding;
-        padding-right: $columns-padding * $golden-ratio;
+        justify-self: right;
+	
+	@include respond-to("medium and down") {
+          padding-left: $columns-padding;
+          padding-right: $columns-padding;
+	}
+
+	@include respond-to("large and up") {
+          padding-left: $columns-padding;
+          padding-right: $columns-padding * $golden-ratio;
+	}
       }
       &--end {
-	      justify-self: left;
-        padding-left: $columns-padding * $golden-ratio;
-        padding-right: $columns-padding;
+        justify-self: left;
+
+	@include respond-to("medium and down") {
+          padding-left: $columns-padding;
+          padding-right: $columns-padding;
+	}
+
+	@include respond-to("large and up") {
+          padding-left: $columns-padding * $golden-ratio;
+          padding-right: $columns-padding;
+	}
       }
     }
   }
