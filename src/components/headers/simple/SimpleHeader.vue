@@ -10,7 +10,9 @@
       <nav class="main-nav" :class="{ 'main-nav--open': isNavOpen }">
         <div class="main-nav__primary">
           <slot name="navigation"></slot>
-          <button class="main-nav__close-button" @click="toggleNav" aria-label="Close">Close</button>
+          <button class="main-nav__close-button" @click="toggleNav" aria-label="Close">
+            <slot name="nav-toggle-close"></slot>
+          </button>
         </div>
       </nav>
       <div class="header__actions">
@@ -62,6 +64,7 @@
 
     &__nav-toggle {
       padding: 0;
+      align-self: center;
 
       @include respond-to("large and up") {
         display: none;
@@ -86,6 +89,11 @@
     }
 
     .main-nav {
+      &__close-button {
+        width: rem($header-nav-close-toggle-size);
+        height: rem($header-nav-close-toggle-size);
+      }
+
       @include respond-to("medium and down") {
         display: none;
 
@@ -98,16 +106,25 @@
           width: $header-nav-mobile-width;
           height: 100%;
           z-index: 1;
-          border-right: 1px solid black;
+          outline: solid;
+          outline-color: black;
+          outline-width: 1px;
         }
 
         &__primary {
-          padding: $gutter;
+          padding: $gutter-xlarge $gutter $gutter;
           display: grid;
           grid-auto-flow: row;
           grid-row-gap: rem($header-nav-spacing);
         }
+
+        &__close-button {
+          position: absolute;
+          top: $gutter-xlarge / 2 - $header-nav-close-toggle-size / 2;
+          right: $gutter;
+        }
       }
+
       @include respond-to("large and up") {
         display: grid;
         grid-auto-flow: column;
