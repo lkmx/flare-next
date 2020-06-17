@@ -19,12 +19,6 @@
     width: 100%;
     display: grid;
 
-    $twin-column-breakpoint-large: rem($column-width-large / 2);
-    $twin-column-breakpoint-xlarge: rem($column-width-xlarge / 2);
-    $twin-column-breakpoint-xxlarge: rem($column-width-xxlarge / 2);
-    $twin-column-breakpoint-xxxlarge: rem($column-width-xxxlarge / 2);
-
-
     @include respond-to("medium and down") {
       grid-template-columns: 1fr;
     }

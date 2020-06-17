@@ -23,13 +23,6 @@
   width: 100%;
   display: grid;
 
-  // Triplet column dimensions
-  $triplet-column-breakpoint-medium: rem($slim-column-width-medium);
-  $triplet-column-breakpoint-large: rem($column-width-large / 3);
-  $triplet-column-breakpoint-xlarge: rem($column-width-xlarge / 3);
-  $triplet-column-breakpoint-xxlarge: rem($column-width-xxlarge / 3);
-  $triplet-column-breakpoint-xxxlarge: rem($column-width-xxxlarge / 3);
-
   @include respond-to("small and down") {
     grid-template-columns: 1fr;
 

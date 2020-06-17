@@ -1,0 +1,12 @@
+@import "../../../guides/screen";
+@import "../../../guides/space";
+
+
+$columns-padding: $gutter !default;
+
+@mixin columns-common {
+  display: grid;
+  grid-auto-flow: row;
+  grid-auto-rows: min-content;
+  max-width: 100%;
+}

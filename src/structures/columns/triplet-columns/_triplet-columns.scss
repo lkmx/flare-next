@@ -1,0 +1,29 @@
+@import "../../../guides/screen";
+@import "../../../guides/space";
+
+
+$columns-padding: $gutter !default;
+
+@mixin columns-common {
+  display: grid;
+  grid-auto-flow: row;
+  grid-auto-rows: min-content;
+  max-width: 100%;
+}
+
+// Triplet column dimensions
+$triplet-column-breakpoint-medium: rem($slim-column-width-medium);
+$triplet-column-breakpoint-large: rem($column-width-large / 3);
+$triplet-column-breakpoint-xlarge: rem($column-width-xlarge / 3);
+$triplet-column-breakpoint-xxlarge: rem($column-width-xxlarge / 3);
+$triplet-column-breakpoint-xxxlarge: rem($column-width-xxxlarge / 3);
+
+// Columns
+$column-width-xxsmall:   100%;
+$column-width-xsmall:    100%;
+$column-width-small:     100%;
+$column-width-medium:    100%;
+$column-width-large:     $breakpoint-large;
+$column-width-xlarge:    $breakpoint-xlarge;
+$column-width-xxlarge:   $breakpoint-xlarge;
+$column-width-xxxlarge:  $breakpoint-xxlarge;
