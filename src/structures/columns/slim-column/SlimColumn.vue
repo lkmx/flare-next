@@ -6,13 +6,15 @@
 
 <script>
   export default {
-    name: 'SingleColumn',
+    name: 'SlimColumn',
   };
 </script>
 
 <style lang="scss" scoped>
   .slim-column {
     @include columns-common;
+    padding-left: $columns-padding;
+    padding-right: $columns-padding;
 
     margin: 0 auto;
     $responsive-breakpoints: (
