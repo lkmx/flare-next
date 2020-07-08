@@ -126,9 +126,10 @@
       }
 
       @include respond-to("large and up") {
-        display: grid;
+        display: $header-nav-primary-desktop-display;
         grid-auto-flow: column;
-        grid-template-columns: 1fr min-content;
+        grid-template-columns: $header-nav-primary-desktop-columns;
+        grid-gap: $header-nav-primary-desktop-gap;
         align-self: center;
 
         &__primary {
