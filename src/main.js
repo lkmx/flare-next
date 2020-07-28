@@ -5,6 +5,7 @@ import SimpleHeader from './components/headers/simple-header/SimpleHeader'
 import SimpleHero from './components/heroes/simple-hero/SimpleHero'
 import SimpleNavItem from './components/navigation/simple-navigation/SimpleNavItem'
 import AnchorLink from './components/utils/anchor-link/AnchorLink'
+import Grid from './components/utils/grid/Grid'
 
 // Structures
 import NoColumn from './structures/columns/no-column/NoColumn'
@@ -21,6 +22,7 @@ const components = {
   SimpleHero,
   SimpleNavItem,
   AnchorLink,
+  Grid,
   NoColumn,
   SingleColumn,
   SlimColumn,
