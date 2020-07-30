@@ -1,5 +1,6 @@
 // Components
 import TextBanner from './components/blocks/text-banner/TextBanner'
+import Grid from './components/blocks/grid/Grid'
 import SimpleFooter from './components/footers/simple-footer/SimpleFooter'
 import SimpleHeader from './components/headers/simple-header/SimpleHeader'
 import SimpleHero from './components/heroes/simple-hero/SimpleHero'
@@ -21,6 +22,7 @@ const components = {
   SimpleHero,
   SimpleNavItem,
   AnchorLink,
+  Grid,
   NoColumn,
   SingleColumn,
   SlimColumn,
