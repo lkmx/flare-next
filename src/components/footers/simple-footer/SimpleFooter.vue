@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <slot></slot>
+    <slot><single-column>Footer</single-column></slot>
   </footer>
 </template>
 
@@ -15,7 +15,10 @@
 
 
 <script>
+  import SingleColumn from  '../../../structures/columns/single-column/SingleColumn';
+
   export default {
     name: 'SimpleFooter',
+    components: { SingleColumn },
   };
 </script>

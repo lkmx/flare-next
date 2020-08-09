@@ -4,19 +4,17 @@
       <a class="header__nav-toggle" @click="toggleNav" aria-label="Navigation toggle">
         <slot name="nav-toggle"></slot>
       </a>
-      <g-link class="header__logo" to="/">
-        <slot name="logo"></slot>
-      </g-link>
+      <a class="header__logo" to="/"><slot name="logo">Logo</slot></a>
       <nav class="main-nav" :class="{ 'main-nav--open': isNavOpen }">
         <div class="main-nav__primary">
-          <slot name="navigation"></slot>
+          <slot name="navigation">Navigation</slot>
           <button class="main-nav__close-button" @click="toggleNav" aria-label="Close">
             <slot name="nav-toggle-close"></slot>
           </button>
         </div>
       </nav>
       <div class="header__actions">
-        <slot name="actions"></slot>
+        <slot name="actions">Actions</slot>
       </div>
     </no-column>
   </header>
@@ -133,11 +131,12 @@
         align-self: center;
 
         &__primary {
-          justify-content: center;
           display: grid;
           grid-auto-flow: column;
           grid-template-columns: repeat(auto-fit, rem($header-nav-items-width));
           grid-column-gap: rem($header-nav-spacing);
+          justify-content: center;
+          justify-items: center;
         }
 
         &__close-button {

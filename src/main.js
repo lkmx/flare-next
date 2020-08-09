@@ -15,6 +15,7 @@ import SlimColumn from './structures/columns/slim-column/SlimColumn'
 import TripletColumns from './structures/columns/triplet-columns/TripletColumn'
 import TwinColumns from './structures/columns/twin-columns/TwinColumns'
 import BasePage from './structures/pages/base-page/BasePage'
+import SimpleLayout from './structures/layouts/simple-layout/SimpleLayout'
 
 const components = {
   TextBanner,
@@ -30,7 +31,8 @@ const components = {
   SlimColumn,
   TripletColumns,
   TwinColumns,
-  BasePage
+  BasePage,
+  SimpleLayout,
 }
 
 export default {
