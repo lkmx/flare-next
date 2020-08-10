@@ -6,3 +6,18 @@
   line-height: $text-line;
   margin: $text-margin;
 }
+
+
+@mixin text-type($text-size, $text-font, $text-weight) {
+  font-size: $text-size;
+  font-family: $text-font;
+  font-weight: $text-weight;
+  letter-spacing: normal;
+}
+
+@mixin text-decoration($text-color, $text-decoration: none) {
+  font-size: $text-size;
+  font-family: $text-font;
+  font-weight: $text-weight;
+}
+

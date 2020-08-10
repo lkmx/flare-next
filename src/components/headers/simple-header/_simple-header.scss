@@ -1,19 +1,29 @@
 @import "../../../guides/space";
 
+// This controls the header's behavior, having two options: relative and fixed.
 $header-position: relative !default;
+
+// This sets the height of the header.
 $header-height: 50px !default;
-$header-text-default-color: white !default;
-$header-background-color: black !default;
+// These handle the dimensions of the spaces in the header.
 $header-logo-space-width: 200px !default;
-$header-logo-height: 30px !default;
-$header-lateral-column-mobile-width: 24px !default;
+$header-actions-space-width: 200px !default;
+
+// These control the background and text colors of the header.
+$header-background-color: black !default;
+$header-text-color: white !default;
+
+
+$header-nav-default-color: $header-text-color !default;
+$header-nav-active-color: blue !default;
+$header-nav-hover-color: red !default;
+
 $header-nav-primary-desktop-display: inline-grid !default;
 $header-nav-primary-desktop-columns: auto !default;
 $header-nav-primary-desktop-gap: $gutter-xxlarge !default;
-$header-nav-default-color: white !default;
 $header-nav-mobile-width: calc(100% - #{$gutter-xxxlarge}) !default;
+$header-lateral-column-mobile-width: 24px !default;
 $header-nav-close-toggle-size: 14px !default;
-$header-actions-space-width: 200px !default;
 
 $header-nav-items-width: 150px !default;
 $header-nav-spacing: $gutter !default;

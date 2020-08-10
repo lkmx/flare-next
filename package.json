@@ -4,6 +4,7 @@
   "description": "Flare Design System",
   "main": "src/sass/flare.scss",
   "dependencies": {
+    "core-js": "^3.6.5",
     "vue": "^2.6.10"
   },
   "keywords": [

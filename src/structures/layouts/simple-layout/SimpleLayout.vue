@@ -1,7 +1,9 @@
 <template>
   <div class="simple-layout">
     <simple-header>
-      <slot name="header"></slot>
+      <template #logo><slot name="logo"></slot></template>
+      <template #navigation><slot name="navigation"></slot></template>
+      <template #actions><slot name="actions"></slot></template>
     </simple-header>
     <slot></slot>
     <simple-footer>
@@ -21,6 +23,5 @@
     display: grid;
     grid-template-rows: min-content 1fr min-content;
     min-height: 100%;
-    height: 100%;
   }
 </style>

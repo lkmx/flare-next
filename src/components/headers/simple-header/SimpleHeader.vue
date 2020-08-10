@@ -4,7 +4,7 @@
       <a class="header__nav-toggle" @click="toggleNav" aria-label="Navigation toggle">
         <slot name="nav-toggle"></slot>
       </a>
-      <a class="header__logo" to="/"><slot name="logo">Logo</slot></a>
+      <div class="header__logo"><slot name="logo">Logo</slot></div>
       <nav class="main-nav" :class="{ 'main-nav--open': isNavOpen }">
         <div class="main-nav__primary">
           <slot name="navigation">Navigation</slot>
@@ -44,10 +44,21 @@
       top: 0;
     }
 
-    color: $header-text-default-color;
+    color: $header-text-color;
     width: 100%;
     height: rem($header-height);
     background-color: $header-background-color;
+
+    a:link {
+      color: $header-nav-default-color;
+    }
+    a:hover {
+      color: $header-nav-hover-color;
+    }
+    a:active {
+      color: $header-nav-active-color;
+    }
+
 
     &__content {
       height: 100%;
@@ -74,11 +85,6 @@
 
       @include respond-to("medium and down") {
         place-self: center center;
-      }
-
-      img {
-        height: rem($header-logo-height);
-        width: auto;
       }
     }
 
