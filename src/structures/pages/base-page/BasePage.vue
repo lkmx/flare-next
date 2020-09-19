@@ -4,12 +4,13 @@
   </main>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .base-page {
     background-image: $page-background-color;
     display: grid;
     grid-auto-flow: row;
     min-height: 100%;
+    height: min-content;
 
     @if($header-position == fixed) {
       @include respond-to("small and down") {

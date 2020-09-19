@@ -6,6 +6,8 @@
 
 <script>
 export default {
+  created () {
+  },
   props: {
     columns: String,
     rowGap: String, 

@@ -10,17 +10,27 @@ $text-font: "Inter", "Arial", sans-serif !default;
 
 
 // Paragraphs
-$paragraph-default-color: black !default;
-$paragraph-default-line: 1em !default;
-$paragraph-margin: 0 0 $gutter 0 !default;
+$paragraph-text-size: 1rem !default;
+$paragraph-text-font: $text-font !default;
+$paragraph-text-weight: normal !default;
+$paragraph-text-color: black !default;
+$paragraph-margin: 0 0 $gutter-large 0 !default;
 $paragraph-line-height: 1.5em !default;
 
 $links-text-color: black !default;
 $links-text-hover-color: blue !default;
 
+// List items
+$list-item-text-size: $paragraph-text-size !default;
+$list-item-text-font: $paragraph-text-font !default;
+$list-item-text-weight: $paragraph-text-weight !default;
+$list-item-text-color: $paragraph-text-color !default;
+$list-item-margin: 0 0 $gutter 0 !default;
+$list-item-line-height: 1em !default;
+
 // Header
 // Default values
-$headers-default-font: "Inter", "Arial", sans-serif !default;
+$headers-default-font: $text-font !default;
 $headers-default-weight: 500 !default;
 $headers-default-color: black !default;
 $headers-default-line: 1em !default;

@@ -58,15 +58,21 @@ main {
   }
 
   p {
-    margin-bottom: $gutter-large;
+    @include text-style($paragraph-text-size, $paragraph-text-font, $paragraph-text-weight, $paragraph-text-color,
+            $paragraph-line-height, $paragraph-margin);
+  }
+
+  li {
+    @include text-style($list-item-text-size, $list-item-text-font, $list-item-text-weight, $list-item-text-color,
+            $list-item-line-height, $list-item-margin);
+  }
+
+  ul, ol {
+    margin: $paragraph-margin;
   }
 
   img {
     max-width: 100%;
-  }
-
-  p, li {
-    line-height: $paragraph-line-height;
   }
 
   a {

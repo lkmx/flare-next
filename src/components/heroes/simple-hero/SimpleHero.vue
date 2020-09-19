@@ -3,9 +3,11 @@
     <div class="simple-hero__cover">
       <slot name="cover"></slot>
     </div>
-    <single-column class="simple-hero__content">
-        <div class="simple-hero__content">
-          <slot></slot>
+    <single-column class="simple-hero__column">
+        <div class="simple-hero__container">
+          <div class="simple-hero__content">
+            <slot></slot>
+          </div>
         </div>
     </single-column>
   </section>
@@ -14,7 +16,6 @@
 <script>
   export default {
     name: 'SimpleHero',
-    props: [ "background" ],
   };
 </script>
 
@@ -23,20 +24,38 @@
     max-width: 100%;
     position: relative;
 
-    @include respond-to("small and down") {
-      min-height: $hero-mobile-height;
+    &, &__column, &__container {
+      @include respond-to("small and down") {
+        min-height: $hero-mobile-height;
+      }
+      @include respond-to("medium") {
+        min-height: $hero-tablet-height;
+      }
+      @include respond-to("large and up") {
+        min-height: $hero-desktop-height;
+      }
     }
-    @include respond-to("medium") {
-      min-height: $hero-tablet-height;
-    }
-    @include respond-to("large and up") {
-      min-height: $hero-desktop-height;
+
+    &__container {
+      position: relative;
+      display: grid;
+      place-content: $hero-content-place;
     }
 
     &__content {
-      height: 100%;
-      display: grid;
-      position: relative;
+      display: block;
+      @include respond-to("small and down") {
+        width: $hero-content-mobile-width;
+      }
+      @include respond-to("medium") {
+        width: $hero-content-tablet-width;
+      }
+      @include respond-to("large and up") {
+        width: $hero-content-desktop-width;
+      }
+      &>h1, &>h2, &>h3 {
+        margin-top: 0;
+      } 
     }
 
     &__cover {

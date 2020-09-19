@@ -4,17 +4,17 @@
       <a class="header__nav-toggle" @click="toggleNav" aria-label="Navigation toggle">
         <slot name="nav-toggle"></slot>
       </a>
-      <div class="header__logo"><slot name="logo">Logo</slot></div>
+      <div class="header__logo"><slot name="logo"></slot></div>
       <nav class="main-nav" :class="{ 'main-nav--open': isNavOpen }">
         <div class="main-nav__primary">
-          <slot name="navigation">Navigation</slot>
+          <slot name="navigation"></slot>
           <button class="main-nav__close-button" @click="toggleNav" aria-label="Close">
             <slot name="nav-toggle-close"></slot>
           </button>
         </div>
       </nav>
       <div class="header__actions">
-        <slot name="actions">Actions</slot>
+        <slot name="actions"></slot>
       </div>
     </no-column>
   </header>
@@ -44,6 +44,7 @@
       top: 0;
     }
 
+    font-family: $header-default-font;
     color: $header-text-color;
     width: 100%;
     height: rem($header-height);
