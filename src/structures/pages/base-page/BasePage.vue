@@ -11,6 +11,7 @@
     grid-auto-flow: row;
     min-height: 100%;
     height: min-content;
+    z-index: 1;
 
     @if($header-position == fixed) {
       @include respond-to("small and down") {
