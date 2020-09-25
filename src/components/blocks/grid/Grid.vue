@@ -31,6 +31,7 @@ export default {
 
 <style lang="scss" scoped>
 .grid {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(var(--columns, #{$grid-columns}), 1fr);
   grid-row-gap: var(--row-gap, #{$grid-row-gap});

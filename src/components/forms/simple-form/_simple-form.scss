@@ -1,0 +1,15 @@
+$input-placeholder-color: gray !default;
+$input-margin-bottom: $gutter-xsmall !default;
+$input-label-color: black !default;
+$input-border: 1px solid !default;
+$input-border-default: 1px solid !default;
+$input-border-active: lightgrey !default;
+$input-border-error: #FA0B0B !default;
+$input-border-disabled: 0.5 !default;
+$input-message-error-color: #FA0B0B !default;
+$input-padding: $gutter-xsmall !default;
+$input-focus-color: black !default;
+
+$field-inline-areas: "input label" !default;
+$field-inline-columns: max-content 1fr !default;
+$field-inline-align: end !default;
