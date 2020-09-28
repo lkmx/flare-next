@@ -5,6 +5,8 @@
 // Text selection color
 $text-selection-color: yellow !default;
 
+$text-color: black !default;
+
 // Fonts
 $text-font: "Inter", "Arial", sans-serif !default;
 
@@ -13,7 +15,7 @@ $text-font: "Inter", "Arial", sans-serif !default;
 $paragraph-text-size: 1rem !default;
 $paragraph-text-font: $text-font !default;
 $paragraph-text-weight: normal !default;
-$paragraph-text-color: black !default;
+$paragraph-text-color: $text-color !default;
 $paragraph-margin: 0 0 $gutter-large 0 !default;
 $paragraph-line-height: 1.5em !default;
 
@@ -32,7 +34,7 @@ $list-item-line-height: 1em !default;
 // Default values
 $headers-default-font: $text-font !default;
 $headers-default-weight: 500 !default;
-$headers-default-color: black !default;
+$headers-default-color: $text-color !default;
 $headers-default-line: 1em !default;
 $headers-default-margin: 0 0 $gutter 0 !default;
 
