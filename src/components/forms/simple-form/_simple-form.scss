@@ -9,7 +9,8 @@ $input-border-disabled: 0.5 !default;
 $input-message-error-color: #FA0B0B !default;
 $input-padding: $gutter-xsmall !default;
 $input-focus-color: black !default;
+$error-container-size: 16px !default;
 
-$field-inline-areas: "input label" !default;
-$field-inline-columns: max-content 1fr !default;
-$field-inline-align: end !default;
+$field-inline-areas: "input label" "error error" !default;
+$field-inline-columns: min-content 1fr !default;
+$error-inline-container-size: 16px !default;

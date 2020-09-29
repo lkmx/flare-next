@@ -1,9 +1,6 @@
 <template>
   <form @submit.prevent="submit" class="simple-form">
-    <slot name="default"></slot>
-    <div class="simple-form__actions">
-      <slot name="actions"></slot>
-    </div>
+    <slot></slot>
   </form>
 </template>
 
@@ -21,23 +18,22 @@ export default {
 <style lang="scss">
 @import "./_simple-form.scss";
 
-$error-space: 32px;
-
 .simple-form {
   [field] {
     position: relative;
     width: 100%;
     display: grid;
     grid-row-gap: $gutter-xsmall;
-    margin-bottom: rem($error-space);
+    margin-bottom: rem($error-container-size * 2);
 
     &[inline] {
       display: grid;
       grid-template-areas: $field-inline-areas;
       grid-template-columns: $field-inline-columns;
       grid-column-gap: $gutter-xsmall;
-      align-self: $field-inline-align;
+      align-self: end;
       align-items: center;
+      margin-bottom: rem($error-inline-container-size * 2);
 
       label {
         grid-area: label;
@@ -50,8 +46,9 @@ $error-space: 32px;
 
       [error-message] {
         grid-area: error;
+        bottom: - ($error-inline-container-size + ($error-inline-container-size / 2));
 
-        & > :empty {
+        &:empty {
           display: none;
         }
       }
@@ -95,9 +92,9 @@ $error-space: 32px;
     [error-message] {
       position: absolute;
       color: $input-message-error-color;
-      bottom: - ($error-space - $gutter-small);
+      bottom: - ($error-container-size + ($error-container-size / 2));
 
-      & > :empty {
+      &:empty {
         display: none;
       }
     }
