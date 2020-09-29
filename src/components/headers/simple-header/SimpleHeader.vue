@@ -59,6 +59,9 @@
     a:active {
       color: $header-nav-active-color;
     }
+    a:visited {
+      color: $header-nav-visited-color;
+    }
 
 
     &__content {
