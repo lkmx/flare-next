@@ -1,5 +1,5 @@
 <template>
-  <div class="slim-column">
+  <div class="slim-column column">
     <slot></slot>
   </div>
 </template>

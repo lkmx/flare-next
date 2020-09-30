@@ -1,5 +1,5 @@
 <template>
-  <div class="triplets">
+  <div class="triplets-columns column">
     <div class="triplets-section triplets-section--start">
       <div class="triplets-column triplets-column--start">
         <slot name="left"></slot>
@@ -19,7 +19,7 @@
 </template>
 
 <style lang="scss">
-.triplets {
+.triplets-column {
   width: 100%;
   display: grid;
 

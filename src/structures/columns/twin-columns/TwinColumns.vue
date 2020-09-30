@@ -1,5 +1,5 @@
 <template>
-  <div class="twin-columns">
+  <div class="twin-columns column">
     <div class="twins-section twins-section--start">
       <div class="twins-column twins-column--start">
         <slot name="left"></slot>
