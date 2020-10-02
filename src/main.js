@@ -35,10 +35,19 @@ const components = {
   SimpleLayout,
 }
 
+function setDefaultTheme() {
+  const theme = getComputedStyle(document.documentElement).getPropertyValue('--theme')
+  if (!theme) return
+  const [body] = document.getElementsByTagName('body')
+  if (!body) return
+  body.setAttribute('theme', theme.trim())
+}
+
 export default {
   install(Vue, options) {
     for (const name in components) {
       Vue.component(name, components[name])
     }
+    setDefaultTheme()
   }
 }

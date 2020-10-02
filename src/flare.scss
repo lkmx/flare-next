@@ -2,6 +2,7 @@
 
 @import "guides/text";
 @import "type";
+@import "themes";
 
 * {
   box-sizing: border-box;
@@ -11,10 +12,23 @@
 }
 
 html {
+  --theme: #{$default-theme};
+  --theme-fg: #{map-get(map-get($themes, $default-theme), "fg")};
+  --theme-bg: #{map-get(map-get($themes, $default-theme), "bg")};
+
   font-size: $base-size;
   height: 100%;
 }
 
 body {
   height: 100%;
+  background-color: var(--theme-bg);
+  color: var(--theme-bg);
+
+  @each $name, $theme in $themes {
+    &[theme=#{$name}] {
+      --theme-fg: #{map-get($theme, "fg")};
+      --theme-bg: #{map-get($theme, "bg")};
+    }
+  }
 }
