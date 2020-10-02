@@ -1,17 +1,17 @@
 <template>
-  <div class="triplets-columns column">
-    <div class="triplets-section triplets-section--start">
-      <div class="triplets-column triplets-column--start">
+  <div class="triplets-columns">
+    <div class="triplets-columns__section">
+      <div class="triplets-columns__column triplets-columns__column--start">
         <slot name="left"></slot>
       </div>
     </div>
-    <div class="triplets-section triplets-section--middle">
-      <div class="triplets-column triplets-column--middle">
+    <div class="triplets-columns__section">
+      <div class="triplets-columns__column triplets-columns__column--middle">
         <slot name="middle"></slot>
       </div>
     </div>
-    <div class="triplets-section triplets-section--end">
-      <div class="triplets-column triplets-column--end">
+    <div class="triplets-columns__section">
+      <div class="triplets-columns__column triplets-columns__column--end">
         <slot name="right"></slot>
       </div>
     </div>
@@ -19,14 +19,14 @@
 </template>
 
 <style lang="scss">
-.triplets-column {
+.triplets-columns {
   width: 100%;
   display: grid;
 
   @include respond-to("small and down") {
     grid-template-columns: 1fr;
 
-    &-column {
+    &__column {
       padding: 0 $columns-padding;
     }
   }
@@ -34,7 +34,7 @@
     grid-template-columns: $triplet-column-breakpoint-medium;
     justify-content: center;
 
-    &-column {
+    &__column {
       padding: 0 $columns-padding;
     }
   }
@@ -50,7 +50,7 @@
       @include respond-to($breakpoint) {
         grid-template-columns: 1fr $breakpoint-width 1fr;
 
-        &-column {
+        &__column {
           width: $breakpoint-width;
           padding: 0 $columns-padding;
 
@@ -65,7 +65,7 @@
     }
   }
 
-  &-section {
+  &__section {
     display: grid;
   }
 }
