@@ -54,6 +54,7 @@
         width: $hero-content-desktop-width;
       }
       &>h1, &>h2, &>h3 {
+        color: $hero-headings-text-color;
         margin-top: 0;
       } 
     }
@@ -66,6 +67,7 @@
       overflow: hidden;
 
       img {
+        width: 100%;
         object-fit: cover;
         @include respond-to("small and down") {
           height: $hero-desktop-height;
