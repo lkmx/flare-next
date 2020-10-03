@@ -48,6 +48,6 @@ export default {
     for (const name in components) {
       Vue.component(name, components[name])
     }
-    setDefaultTheme()
+    Vue.$setDefaultTheme = setDefaultTheme
   }
 }
