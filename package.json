@@ -1,6 +1,6 @@
 {
   "name": "@lkmx/flare",
-  "version": "0.28.7",
+  "version": "0.28.8",
   "description": "Flare Design System",
   "main": "src/sass/flare.scss",
   "dependencies": {
