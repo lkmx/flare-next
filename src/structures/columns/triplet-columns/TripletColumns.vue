@@ -1,5 +1,5 @@
 <template>
-  <div class="triplets-columns">
+  <div class="triplets-columns column">
     <div class="triplets-columns__section">
       <div class="triplets-columns__column triplets-columns__column--start">
         <slot name="left"></slot>
