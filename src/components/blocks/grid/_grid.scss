@@ -5,3 +5,15 @@ $grid-row-gap: $gutter !default;
 $grid-column-gap: $gutter !default;
 $grid-align-items: start !default;
 $grid-justify-items: start !default;
+
+$grid-tablet-columns: 2 !default;
+$grid-tablet-row-gap: $gutter !default;
+$grid-tablet-column-gap: $gutter !default;
+$grid-tablet-align-items: start !default
+$grid-tablet-justify-items: start !default;
+
+$grid-mobile-columns: 1 !default;
+$grid-mobile-row-gap: $gutter !default;
+$grid-mobile-column-gap: $gutter !default
+$grid-mobile-align-items: start !default;
+$grid-mobile-justify-items: start !default;
