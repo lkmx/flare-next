@@ -4,6 +4,7 @@
       <template #logo><slot name="logo"></slot></template>
       <template #navigation><slot name="navigation"></slot></template>
       <template #actions><slot name="actions"></slot></template>
+      <template #nav-toggle><slot name="nav-toggle"></slot></template>
     </simple-header>
     <slot></slot>
     <simple-footer>

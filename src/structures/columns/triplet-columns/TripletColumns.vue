@@ -22,6 +22,7 @@
 .triplets-columns {
   width: 100%;
   display: grid;
+  grid-row-gap: $triplet-column-row-gap;
 
   @include respond-to("small and down") {
     grid-template-columns: 1fr;

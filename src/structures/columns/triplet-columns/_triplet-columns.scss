@@ -3,6 +3,7 @@
 
 
 $columns-padding: $gutter !default;
+$triplet-column-row-gap: $gutter !default;
 
 @mixin columns-common {
   display: grid;

@@ -145,8 +145,8 @@
           grid-auto-flow: column;
           grid-template-columns: repeat(auto-fit, rem($header-nav-items-width));
           grid-column-gap: rem($header-nav-spacing);
-          justify-content: center;
-          justify-items: center;
+          justify-content: $header-nav-justify-content;
+          justify-items: $header-nav-justify-items;
         }
 
         &__close-button {
