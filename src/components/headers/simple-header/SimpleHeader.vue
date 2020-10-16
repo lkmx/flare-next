@@ -129,7 +129,7 @@
           top: 0;
           left: 0;
           display: block;
-          background-color: $header-nav-default-color;
+          background-color: $header-nav-background-color;
           color: $header-nav-color;
           width: $header-nav-mobile-width;
           height: 100%;
