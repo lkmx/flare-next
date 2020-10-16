@@ -5,6 +5,8 @@
       <template #navigation><slot name="navigation"></slot></template>
       <template #actions><slot name="actions"></slot></template>
       <template #nav-toggle><slot name="nav-toggle"></slot></template>
+      <template #nav-toggle-close><slot name="nav-toggle-close"></slot></template>
+      <template #navigation-header><slot name="navigation-header"></slot></template>
     </simple-header>
     <slot></slot>
     <simple-footer>

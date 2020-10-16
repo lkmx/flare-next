@@ -7,10 +7,13 @@
       <div class="header__logo"><slot name="logo"></slot></div>
       <nav class="main-nav" :class="{ 'main-nav--open': isNavOpen }">
         <div class="main-nav__primary">
+          <div class="main-nav__header">
+            <slot name="navigation-header"></slot>
+            <button class="main-nav__close-button" @click="toggleNav" aria-label="Close">
+              <slot name="nav-toggle-close"></slot>
+            </button>
+          </div>
           <slot name="navigation"></slot>
-          <button class="main-nav__close-button" @click="toggleNav" aria-label="Close">
-            <slot name="nav-toggle-close"></slot>
-          </button>
         </div>
       </nav>
       <div class="header__actions">
@@ -31,6 +34,11 @@
     methods: {
       toggleNav () {
         this.isNavOpen = !this.isNavOpen
+      }
+    },
+    watch:{
+      $route (to, from){
+        this.isNavOpen = false
       }
     }
   };
@@ -102,6 +110,17 @@
         height: rem($header-nav-close-toggle-size);
       }
 
+      &__header {
+        @include respond-to("medium and down") {
+          display: grid;
+          grid-auto-flow: column;
+          align-items: center;
+        }
+        @include respond-to("large and up") {
+          display: none;
+        }
+      }
+
       @include respond-to("medium and down") {
         display: none;
 
@@ -111,25 +130,27 @@
           left: 0;
           display: block;
           background-color: $header-nav-default-color;
+          color: $header-nav-color;
           width: $header-nav-mobile-width;
           height: 100%;
-          z-index: 1;
+          z-index: 10000;
           outline: solid;
           outline-color: black;
           outline-width: 1px;
         }
 
         &__primary {
-          padding: $gutter-xlarge $gutter $gutter;
           display: grid;
           grid-auto-flow: row;
           grid-row-gap: rem($header-nav-spacing);
         }
 
         &__close-button {
-          position: absolute;
-          top: $gutter-xlarge / 2 - $header-nav-close-toggle-size / 2;
-          right: $gutter;
+          justify-self: end;
+          img {
+            width: rem(24px);
+            height: rem(24px);
+          }
         }
       }
 
