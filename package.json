@@ -5,9 +5,9 @@
   "main": "src/main.js",
   "dependencies": {
     "core-js": "^3.6.5",
-    "vue": "^2.6.10",
     "node-sass": "^5.0.0",
-    "sass-loader": "^10.1.0"
+    "sass-loader": "^10.1.0",
+    "vue": "^2.6.10"
   },
   "keywords": [
     "flare",

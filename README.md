@@ -50,3 +50,6 @@ export default function(Vue, { router, head, isClient }) {
 }
 ````
 
+Change the `src\layout
+
+### Markdown support
