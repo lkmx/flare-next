@@ -1,12 +1,12 @@
-import Page from "../flare/structure/Page.vue";
-import Column from "../flare/structure/Columns.vue";
-import Columns from "../flare/structure/Columns.vue";
-import Block from "../flare/structure/Block.vue";
+import Page from "./structure/Page.vue";
+import Column from "./structure/Columns.vue";
+import Columns from "./structure/Columns.vue";
+import Block from "./structure/Block.vue";
 
-import SimpleLayout from "../flare/layouts/SimpleLayout.vue";
+import SimpleLayout from "./layouts/SimpleLayout.vue";
 
-import SimpleHeader from "../flare/ui/SimpleHeader.vue";
-import SimpleFooter from "../flare/ui/SimpleFooter.vue";
+import SimpleHeader from "./ui/SimpleHeader.vue";
+import SimpleFooter from "./ui/SimpleFooter.vue";
 
 
 const components = {
