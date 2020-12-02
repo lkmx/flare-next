@@ -23,12 +23,19 @@ export default {
 
 <style lang="scss">
 .simple-header {
-  color: var(--f-header-text-color);
-  background-color: var(--f-header-background-color);
+  min-height: var(--f-gutter-xl);
   height: var(--f-header-height);
 
+  color: var(--f-header-text-color);
+  background-color: var(--f-header-background-color);
   a {
     color: var(--f-header-text-color);
+  }
+
+  nav:not(.actions) {
+    a {
+      padding: 0 var(--f-gutter);
+    }
   }
   
   .--flare {

@@ -29,21 +29,24 @@ npm install --save git://github.com/lkmx/flare.git#0.3.0
 
 Create a file `sass/style.scss` in your `src` directory and import flare's stylesheet.
 
-````sass
-@import "~@lkmx/flare/src/flare"
+````scss
+@import "~@lkmx/flare/src/flare";
 ````
 
-Import flare's components into your main.js file and make sure VueJS uses it.
+Import flare's components into your main.js file and make sure VueJS uses it resulting in:
 
 ````javascript
-import './sass/style.scss';
+import "./sass/style.scss";
 
-import Flare from '@lkmx/flare';
+import Flare from "@lkmx/flare";
 
-export default function (Vue, { router, head, isClient }) {
-    // Other setup
-    Vue.use(Flare);  
+import DefaultLayout from "~/layouts/Default.vue";
+
+export default function(Vue, { router, head, isClient }) {
+  // Set default layout as a global component
+  Vue.component("Layout", DefaultLayout);
+
+  Vue.use(Flare);
 }
-
 ````
 
