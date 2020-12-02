@@ -1,0 +1,53 @@
+<template>
+  <header class="simple-header">
+    <column :mode="mode">
+      <div class="simple-header__content">
+        <slot></slot>
+      </div>
+    </column>
+  </header>
+</template>
+
+<script>
+import Columns from "../structure/Columns.vue";
+export default {
+  components: { Columns },
+  props: {
+    mode: {
+      type: String,
+      required: false,
+    },
+  },
+};
+</script>
+
+<style lang="scss">
+.simple-header {
+  color: var(--f-header-text-color);
+  background-color: var(--f-header-background-color);
+  height: var(--f-header-height);
+
+  a {
+    color: var(--f-header-text-color);
+  }
+  
+  .--flare {
+    &-columns {
+      height: 100%;
+    }
+    &-block {
+      height: 100%;
+      --f-block-content-padding: 0;
+    }
+  }
+
+  &__content {
+    height: 100%;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+</style>

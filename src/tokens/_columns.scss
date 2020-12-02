@@ -1,0 +1,30 @@
+@import "space";
+
+.--flare-columns {
+  // Column default widths
+  // When columns aren't defined 100% is used
+  //--f-columns-normal-width-xxs: 100%;
+  //--f-columns-normal-width-xs:  100%;
+  //--f-columns-normal-width-s:   100%;
+  
+  --f-columns-normal-width-m:    var(--f-breakpoint-m);
+
+  --f-columns-normal-width-l:    var(--f-breakpoint-l);
+  --f-columns-normal-width-xl:   var(--f-breakpoint-xl);
+  --f-columns-normal-width-xxl:  var(--f-breakpoint-xl);
+  --f-columns-normal-width-xxxl: var(--f-breakpoint-xxl);
+  
+  //--f-columns-slim-width-xxs: 100%;
+  //--f-columns-slim-width-xs:  100%;
+  //--f-columns-slim-width-s:   100%;
+  
+  --f-columns-slim-width-m:    calc(var(--f-breakpoint-m) / var(--f-golden-ratio));
+  
+  --f-columns-slim-width-l:    calc(var(--f-breakpoint-l) / var(--f-golden-ratio));
+  --f-columns-slim-width-xl:   calc(var(--f-breakpoint-xl) / var(--f-golden-ratio));
+  --f-columns-slim-width-xxl:  calc(var(--f-breakpoint-xl) / var(--f-golden-ratio));
+  --f-columns-slim-width-xxxl: calc(var(--f-breakpoint-xxl) / var(--f-golden-ratio));
+
+  
+  --f-columns-weight-ratio: var(--f-golden-ratio);
+}
