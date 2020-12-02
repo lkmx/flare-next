@@ -1,3 +1,5 @@
+![Flare](./flare.png)
+
 # Flare
 
 Flare is a design system for front-end agile development. 
