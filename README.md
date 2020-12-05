@@ -10,6 +10,19 @@ The design system implementation is focused in the separation of content, design
 
 Currently Flare is in an early version 0.3.0 and it provides with a [VueJS](https://vuejs.org/) implementation mounted in [Gridsome](https://gridsome.org/).
 
-## Start
+## Getting started
 
-Check out the [flare-starter](https://github.com/lkmx/flare-starter) project.
+Getting started is easy with [degit](https://github.com/Rich-Harris/degit):
+
+````bash
+degit github:lkmx/flare-starter#main project-name
+````
+
+Then do:
+
+````bash
+npm install
+npm run develop
+````
+
+Your new app should be running now in [http://localhost:8080](http://localhost:8080).

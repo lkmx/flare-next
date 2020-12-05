@@ -1,5 +1,5 @@
 <template>
-  <section class="--flare --flare-columns" :class="classes" :style="style">
+  <section class="--flare --flare-frame --flare-columns" :class="classes" :style="style">
     <slot></slot>
   </section>
 </template>

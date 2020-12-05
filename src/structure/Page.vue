@@ -18,13 +18,13 @@ export default {
       // The template column instance is created using components but
       // no slots are used at the moment so regular HTML elements are 
       // used to avoid having to create VirtualDOM elements.
-      function instanceColumn() {
+      function instanceDefaultFrame() {
         const column = new ColumnsClass();
         column.$mount();
         return column;
       }
 
-      let column = instanceColumn();
+      let column = instanceDefaultFrame();
 
       // The parent page
       let page = this.$el;
@@ -44,11 +44,11 @@ export default {
         // if there's a new column starting then the open column
         // must be closed and appended to the parent page
         // ...only if the staging column has nodes
-        if (node.classList.contains("--flare-columns")) {
+        if (node.classList.contains("--flare-frame")) {
             if( column.$el.hasChildNodes()) {
               column.process();
               page.insertBefore(column.$el, node);
-              column = instanceColumn();
+              column = instanceDefaultFrame();
               i++;
             }
         } else {
