@@ -21,6 +21,7 @@ degit github:lkmx/flare-starter#main project-name
 Then do:
 
 ````bash
+cd project-name
 npm install
 npm run develop
 ````

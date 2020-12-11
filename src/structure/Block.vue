@@ -24,8 +24,6 @@ export default {
 
     p img {
       width: calc(100% + calc(var(--f-block-content-padding) * 2));
-      margin-left: calc(var(--f-block-content-padding) * -1);
-      margin-right: calc(var(--f-block-content-padding) * -1);
     }
 
     :last-child {
