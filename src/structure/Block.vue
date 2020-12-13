@@ -1,6 +1,6 @@
 <template>
   <div class="--flare --flare-block">
-    <div class="content"><slot></slot></div>
+    <div class="content"><div class="box"><slot></slot></div></div>
   </div>
 </template>
 
@@ -17,15 +17,12 @@ export default {
   width: 100%;
   display: grid;
 
-  .content {
-    overflow: auto;
-
+  .box {
     padding: var(--f-block-content-padding);
-
-    p img {
-      width: calc(100% + calc(var(--f-block-content-padding) * 2));
+    max-width: 100%;
+    img {
+      max-width: 100%;
     }
-
     :last-child {
       margin-bottom: 0;
     }
@@ -38,6 +35,7 @@ export default {
   @each $breakpoint in $breakpoints {
     @include respond-to($breakpoint) {
       .content {
+        overflow: auto;
         width: var(--f-block-width-#{$breakpoint});
         max-width: 100%;
       }

@@ -22,7 +22,7 @@
       }
 
       &.--flare-columns--#{$breakpoint}-mode-slim {
-        --f-columns-width-#{$breakpoint}:  var(--f-columns-slim-width-#{$breakpoint}); 
+        --f-columns-width-#{$breakpoint}: calc(var(--f-columns-normal-width-#{$breakpoint}) / var(--f-columns-slim-ratio));
       }
 
       // Column margins are calculated first
@@ -269,7 +269,7 @@ export default {
         const node = this.$el.children[i];
 
         if (node.classList.contains("--flare-block")) {
-          if (block.children[0].hasChildNodes()) {
+          if (block.children[0].children[0].hasChildNodes()) {
             this.$el.insertBefore(block, node);
             block = instanceBlock();
             i++;
@@ -278,10 +278,10 @@ export default {
           // If the element is not a block remove it and
           // append it to the current staging block
           this.$el.removeChild(node);
-          block.children[0].appendChild(node);
+          block.children[0].children[0].appendChild(node);
           i--;
         }
-        if (block.children[0].hasChildNodes()) {
+        if (block.children[0].children[0].hasChildNodes()) {
           this.$el.appendChild(block);
         }
       }
