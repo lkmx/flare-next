@@ -381,9 +381,9 @@ export default {
 
     modes() {
       return {
-        "xxs": this.modeXxs || this.modeXs || this.modeS || this.mode,
-        "xs": this.modeXs || this.modeS || this.mode,
-        "s": this.modeS || this.mode,
+        "xxs": this.modeXxs || this.modeXs || this.modeS || this.modeM || this.mode,
+        "xs": this.modeXs || this.modeS || this.modeM || this.mode,
+        "s": this.modeS || this.modeM || this.mode,
         "m": this.modeM || this.mode,
         "l": this.modeL || this.mode,
         "xl": this.modeXl || this.modeL || this.mode,
@@ -394,9 +394,9 @@ export default {
 
     numbers() {
       return {
-        "xxs": this.numberXxs || this.numberXs || this.numberS || this.number,
-        "xs": this.numberXs || this.numberS || this.number,
-        "s": this.numberS || this.number,
+        "xxs": this.numberXxs || this.numberXs || this.numberS || this.numberM || this.number,
+        "xs": this.numberXs || this.numberS || this.numberM || this.number,
+        "s": this.numberS || this.numberM || this.number,
         "m": this.numberM || this.number,
         "l": this.numberL || this.number,
         "xl": this.numberXl || this.numberL || this.number,
@@ -407,9 +407,9 @@ export default {
 
     weights() {
       return {
-        "xxs": this.weightXxs || this.weightXs || this.weightS || this.weight,
-        "xs": this.weightXs || this.weightS || this.weight,
-        "s": this.weightS || this.weight,
+        "xxs": this.weightXxs || this.weightXs || this.weightS || this.weightM || this.weight,
+        "xs": this.weightXs || this.weightS || this.weightM || this.weight,
+        "s": this.weightS || this.weightM || this.weight,
         "m": this.weightM || this.weight,
         "l": this.weightL || this.weight,
         "xl": this.weightXl || this.weightL || this.weight,
