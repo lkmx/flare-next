@@ -12,13 +12,19 @@ Currently Flare is in an early version 0.3.0 and it provides with a [VueJS](http
 
 ## Getting started
 
-Getting started is easy with [degit](https://github.com/Rich-Harris/degit):
+Getting started is easy with [degit](https://github.com/Rich-Harris/degit), install it with:
+
+````bash
+npm install -g degit
+````
+
+Use it to create an empy project.
 
 ````bash
 degit github:lkmx/flare-starter#main project-name
 ````
 
-Then do:
+Install the dependencies and run a development server
 
 ````bash
 cd project-name
@@ -27,3 +33,11 @@ npm run develop
 ````
 
 Your new app should be running now in [http://localhost:8080](http://localhost:8080).
+
+Build the app for production
+
+````bash
+npm run build
+````
+
+Find the files in `dist`
