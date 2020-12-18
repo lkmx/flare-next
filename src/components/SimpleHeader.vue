@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import Columns from "../structure/Columns.vue";
+import Columns from "../core/Columns.vue";
 export default {
   components: { Columns },
   props: {

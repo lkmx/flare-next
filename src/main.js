@@ -1,17 +1,18 @@
-import Page from "./structure/Page.vue";
-import Column from "./structure/Columns.vue";
-import Columns from "./structure/Columns.vue";
-import Block from "./structure/Block.vue";
+import Page from "./core/Page.vue";
+import Column from "./core/Columns.vue";
+import Columns from "./core/Columns.vue";
+import Block from "./core/Block.vue";
 
 import SimpleLayout from "./layouts/SimpleLayout.vue";
+import SidesLayout from "./layouts/SidesLayout.vue";
 
-import SimpleHeader from "./ui/SimpleHeader.vue";
-import SimpleFooter from "./ui/SimpleFooter.vue";
+import SimpleHeader from "./components/SimpleHeader.vue";
+import SimpleFooter from "./components/SimpleFooter.vue";
 
 
 const components = {
   Page, Columns, Column, Block, 
-  SimpleLayout,
+  SimpleLayout, SidesLayout,
   SimpleHeader, SimpleFooter,
 };
 

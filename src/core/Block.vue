@@ -18,7 +18,7 @@ export default {
   display: grid;
 
   .box {
-    padding: var(--f-block-content-padding);
+    padding: var(--f-block-default-padding);
     max-width: 100%;
     img {
       max-width: 100%;
