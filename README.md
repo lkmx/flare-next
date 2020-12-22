@@ -2,7 +2,7 @@
 
 # Flare
 
-Flare is a design system for front-end agile development. 
+Flare is a design system for agile front-end software engineering. 
 
 Flare's paradigm helps to understand the user interface from a simple and structured standpoint, introducing an abstraction layer that shapes a common language between analysts, designers, coders and testers.
 
@@ -18,10 +18,10 @@ Getting started is easy with [degit](https://github.com/Rich-Harris/degit), inst
 npm install -g degit
 ````
 
-Use it to create an empy project.
+Use it to create an empty project.
 
 ````bash
-degit github:lkmx/flare-starter#main project-name
+degit github:lkmx/flare-starter-gridsome#main project-name
 ````
 
 Install the dependencies and run a development server
