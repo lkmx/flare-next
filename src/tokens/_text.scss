@@ -10,7 +10,7 @@
     --f-paragraph-text-size: 1rem;
     --f-paragraph-text-font: var(--f-default-text-font);
     --f-paragraph-text-weight: normal;
-    --f-paragraph-text-color: var(--f-text-default-color);
+    --f-paragraph-text-color: var(--f-default-text-color);
     --f-paragraph-line-height: 1.5em;
     --f-paragraph-margin: 0 0 var(--f-gutter) 0;
     
@@ -31,7 +31,7 @@
     // Header default values
     --f-default-headers-font: var(--f-default-text-font);
     --f-default-headers-weight: 600;
-    --f-default-headers-color: var(--f-text-default-color);
+    --f-default-headers-color: var(--f-default-text-color);
     --f-default-headers-line: 1.5em;
     --f-default-headers-margin: 0 0 var(--f-gutter) 0;
     
