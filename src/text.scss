@@ -68,12 +68,12 @@ img {
 
 a {
     color: var(--f-links-text-color);
-
-    &:hover {
-        color: var(--f-links-text-hover-color);
-    }
+    
     &:visited {
         color: var(--f-links-text-visited-color);
+    }
+    &:hover {
+        color: var(--f-links-text-hover-color);
     }
     &:active {
         color: var(--f-links-text-active-color);
