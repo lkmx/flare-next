@@ -4,6 +4,8 @@
 @import 'functions';
 
 @import 'text';
+@import 'forms';
+
 
 * {
     box-sizing: border-box;
@@ -15,4 +17,11 @@ html {
 
 body {
     font-family: var(--f-default-text-font);
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: var(--f-default-text-color);
+    margin-bottom: var(--f-gutter);
 }

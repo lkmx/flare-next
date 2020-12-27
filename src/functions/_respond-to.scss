@@ -33,7 +33,7 @@
       }
     }
   
-    @else if $breakpoint == 's and up' or $breakpoint == '>s' {
+    @else if $breakpoint == 's and up' or $breakpoint == '>=s' or $breakpoint == '>xs' {
       @media screen and (min-width: #{$breakpoint-s}) {
         @content;
       }
@@ -51,7 +51,7 @@
       }
     }
   
-    @else if $breakpoint == 'm and up' or $breakpoint == '>m' {
+    @else if $breakpoint == 'm and up' or $breakpoint == '>=m' or $breakpoint == '>s' {
       @media screen and (min-width: $breakpoint-m) {
         @content;
       }
@@ -69,7 +69,7 @@
       }
     }
   
-    @else if $breakpoint == 'l and up' or $breakpoint == '>l' {
+    @else if $breakpoint == 'l and up' or $breakpoint == '>=l' or $breakpoint == '>m' {
       @media screen and (min-width: #{$breakpoint-l}) {
         @content;
       }
@@ -93,7 +93,7 @@
       }
     }
   
-    @else if $breakpoint == 'xl and up' or $breakpoint == '>xl' {
+    @else if $breakpoint == 'xl and up' or $breakpoint == '>=xl' or $breakpoint == '>l' {
       @media screen and (min-width: #{$breakpoint-xl}) {
         @content;
       }
@@ -111,7 +111,7 @@
       }
     }
   
-    @else if $breakpoint == 'xxl and up' or $breakpoint == '>xxl' {
+    @else if $breakpoint == 'xxl and up' or $breakpoint == '>=xxl' or $breakpoint == '>xl' {
       @media screen and (min-width: #{$breakpoint-xxl}) {
         @content;
       }

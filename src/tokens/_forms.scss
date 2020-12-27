@@ -1,0 +1,14 @@
+
+:root {
+    --f-error-color: red;
+    --f-primary-action-color: #00B913;
+    --f-primary-action-anticolor: white;
+}
+
+form {
+    --f-forms-text-font: var(--f-paragraph-text-font);
+    
+    --f-forms-radius: 0;
+    --f-forms-input-border-color:#999;
+    --f-forms-input-border-width: 1px;
+}

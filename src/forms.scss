@@ -1,0 +1,57 @@
+form {
+  label,
+  input {
+    font-size: 1rem;
+    display: block;
+  }
+
+  label {
+    color: var(--f-paragraph-text-color);
+    margin-bottom: var(--f-gutter-s);
+    font-size: 1rem;
+  }
+
+  input, textarea {
+    font-family: var(--f-forms-text-font);
+    font-size: 1rem;
+    border-color: var(--f-forms-input-border-color);
+    border-width: var(--f-forms-input-border-width);
+    border-style: solid;
+    
+    width: 100%;
+    outline: none;
+    padding: 0.5rem;
+    border-radius: var(--f-forms-radius);
+    margin-bottom: var(--f-gutter);
+
+    &[type="text"],
+    &[type="email"],
+    &[type="password"] {
+      appearance: none;
+    }
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  .error {
+    font-size: rem(14px);
+    font-weight: bold;
+    color: var(--f-error-color);
+    position: relative;
+    top: -0.5rem;
+  }
+}
+
+button {
+  border: none;
+  color: var(--f-primary-action-anticolor);
+  background-color: var(--f-primary-action-color);
+  padding: 0.5rem;
+  display: block;
+  border-radius: var(--f-forms-radius);
+  font-size: 1.125rem;
+  outline: none;
+  margin-bottom: var(--f-gutter);
+}

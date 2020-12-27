@@ -23,7 +23,7 @@ export default {
     img {
       max-width: 100%;
     }
-    :last-child {
+    &>:last-child {
       margin-bottom: 0;
     }
   }

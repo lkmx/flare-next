@@ -28,6 +28,17 @@ p {
     margin: var(--f-paragraph-margin);
 }
 
+dl {
+    font-size: var(--f-paragraph-text-size);
+    font-family: var(--f-paragraph-text-font);
+    font-weight: var(--f-paragraph-text-weight);
+    color: var(--f-paragraph-text-color);
+}
+
+dd {
+    margin-bottom: var(--f-gutter);
+}
+
 table {
     font-family: var(--f-table-text-font);
     font-size: var(--f-table-text-size);
