@@ -15,7 +15,7 @@ Currently Flare is in an early version 0.3.0 and it provides with a [VueJS](http
 Getting started is easy with [degit](https://github.com/Rich-Harris/degit), install it with:
 
 ````bash
-npm install -g degit
+yarn global add degit
 ````
 
 Use it to create an empty project.
@@ -28,8 +28,8 @@ Install the dependencies and run a development server
 
 ````bash
 cd project-name
-npm install
-npm run develop
+yarn
+yarn run develop
 ````
 
 Your new app should be running now in [http://localhost:8080](http://localhost:8080).
@@ -37,7 +37,7 @@ Your new app should be running now in [http://localhost:8080](http://localhost:8
 Build the app for production
 
 ````bash
-npm run build
+yarn run build
 ````
 
 Find the files in `dist`

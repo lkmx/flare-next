@@ -61,16 +61,8 @@ li {
     margin: var(--f-list-item-margin);
 }
 
-ul>li {
-
-    &:before {
-        padding-right: var(--f-gutter);
-        content: '-';
-    }
-}
-
 ul, ol {
-    margin: var(--f-paragraph-text-margin);
+    margin: var(--f-paragraph-margin);
 }
 
 img {

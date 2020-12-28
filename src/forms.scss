@@ -21,7 +21,7 @@ form {
     width: 100%;
     outline: none;
     padding: 0.5rem;
-    border-radius: var(--f-forms-radius);
+    border-radius: var(--f-forms-input-radius);
     margin-bottom: var(--f-gutter);
 
     &[type="text"],
@@ -37,10 +37,9 @@ form {
 
   .error {
     font-size: rem(14px);
-    font-weight: bold;
     color: var(--f-error-color);
-    position: relative;
-    top: -0.5rem;
+    display: block;
+    margin-bottom: var(--f-gutter-xs);
   }
 }
 
@@ -48,10 +47,13 @@ button {
   border: none;
   color: var(--f-primary-action-anticolor);
   background-color: var(--f-primary-action-color);
-  padding: 0.5rem;
+  padding: 0.625rem;
   display: block;
-  border-radius: var(--f-forms-radius);
-  font-size: 1.125rem;
+  border-radius: var(--f-forms-button-radius);
   outline: none;
   margin-bottom: var(--f-gutter);
+
+  &:disabled {
+      opacity: 0.5;
+  }
 }
