@@ -43,12 +43,12 @@ form {
   }
 }
 
-button {
+button, .button {
+  display: block;
   border: none;
   color: var(--f-primary-action-anticolor);
   background-color: var(--f-primary-action-color);
   padding: 0.625rem;
-  display: block;
   border-radius: var(--f-forms-button-radius);
   outline: none;
   margin-bottom: var(--f-gutter);

@@ -33,7 +33,9 @@ export default {
       // since, for example, <VueRemarkContent /> introduces an empty div
       if (
         this.$el.children.length == 1 &&
-        this.$el.children[0].nodeName.toUpperCase() == "DIV"
+        this.$el.children[0].nodeName.toUpperCase() == "DIV" &&
+        this.$el.children[0].classList == 0 && 
+        this.$el.children[0].id === ""
       ) {
         page = this.$el.children[0];
       }
