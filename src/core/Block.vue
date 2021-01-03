@@ -35,7 +35,6 @@ export default {
   @each $breakpoint in $breakpoints {
     @include respond-to($breakpoint) {
       .content {
-        overflow: auto;
         width: var(--f-block-width-#{$breakpoint});
         max-width: 100%;
       }
