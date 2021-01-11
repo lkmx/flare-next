@@ -1,46 +1,50 @@
-form {
-  label,
-  input {
-    font-size: 1rem;
-    display: block;
-  }
+label,
+input {
+  font-size: 1rem;
+  display: block;
+}
 
-  label {
-    color: var(--f-paragraph-text-color);
-    margin-bottom: var(--f-gutter-s);
-    font-size: 1rem;
-  }
+label {
+  color: var(--f-paragraph-text-color);
+  margin-bottom: var(--f-gutter-s);
+  font-size: 1rem;
+}
 
-  input, textarea {
-    font-family: var(--f-forms-text-font);
-    font-size: 1rem;
-    border-color: var(--f-forms-input-border-color);
-    border-width: var(--f-forms-input-border-width);
-    border-style: solid;
-    
-    width: 100%;
-    outline: none;
-    padding: 0.5rem;
-    border-radius: var(--f-forms-input-radius);
-    margin-bottom: var(--f-gutter);
+input, textarea {
+  font-family: var(--f-forms-text-font);
+  font-size: 1rem;
+  border-color: var(--f-forms-input-border-color);
+  border-width: var(--f-forms-input-border-width);
+  border-style: solid;
+  
+  width: 100%;
+  outline: none;
+  padding: var(--f-forms-input-padding);
+  border-radius: var(--f-forms-input-radius);
+  margin-bottom: var(--f-gutter);
 
-    &[type="text"],
-    &[type="email"],
-    &[type="password"] {
-      appearance: none;
-    }
+  &[type="text"],
+  &[type="email"],
+  &[type="password"] {
+    appearance: none;
   }
+}
 
-  textarea {
-    resize: none;
-  }
+textarea {
+  resize: none;
+}
 
-  .error {
-    font-size: rem(14px);
-    color: var(--f-error-color);
-    display: block;
-    margin-bottom: var(--f-gutter-xs);
-  }
+.error {
+  font-size: rem(14px);
+  color: var(--f-error-color);
+  display: block;
+  margin-bottom: var(--f-gutter-xs);
+}
+
+select {
+  padding: var(--f-forms-input-padding);
+  margin-bottom: var(--f-gutter);
+  height: min-content;
 }
 
 button, .button, a.button {
