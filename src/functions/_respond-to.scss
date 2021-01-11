@@ -21,7 +21,7 @@
     }
   
   
-    @if $breakpoint == 'xs and down' or $breakpoint == '<xs' {
+    @if $breakpoint == 'xs and down' or $breakpoint == '<=xs' {
       @media screen and (max-width: (#{$breakpoint-s - 1px})) {
         @content;
       }
@@ -39,7 +39,7 @@
       }
     }
   
-    @else if $breakpoint == 's and down' or $breakpoint == '<s' {
+    @else if $breakpoint == 's and down' or $breakpoint == '<=s' {
       @media screen and (max-width: (#{$breakpoint-m - 1px})) {
         @content;
       }
@@ -57,7 +57,7 @@
       }
     }
   
-    @else if $breakpoint == 'm and down' or $breakpoint == '<m' {
+    @else if $breakpoint == 'm and down' or $breakpoint == '<=m' {
       @media screen and (max-width: (#{$breakpoint-l - 1px})) {
         @content;
       }
@@ -75,7 +75,7 @@
       }
     }
   
-    @else if $breakpoint == 'l and down' or $breakpoint == '<l' {
+    @else if $breakpoint == 'l and down' or $breakpoint == '<=l' {
       @media screen and (max-width: (#{$breakpoint-xl - 1px})) {
         @content;
       }
@@ -87,7 +87,7 @@
       }
     }
   
-    @else if $breakpoint == 'xl and down' or $breakpoint == '<xl' {
+    @else if $breakpoint == 'xl and down' or $breakpoint == '<=xl' {
       @media screen and (max-width: (#{$breakpoint-xxl - 1px})) {
         @content;
       }
@@ -105,7 +105,7 @@
       }
     }
   
-    @else if $breakpoint == 'xxl and down' or $breakpoint == '<xxl' {
+    @else if $breakpoint == 'xxl and down' or $breakpoint == '<=xxl' {
       @media screen and (max-width: (#{$breakpoint-xxxl - 1px})) {
         @content;
       }
