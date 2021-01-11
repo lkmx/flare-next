@@ -43,17 +43,29 @@ form {
   }
 }
 
-button, .button {
-  display: block;
+button, .button, a.button {
+  display: inline-block;
   border: none;
+  line-height: normal;
   color: var(--f-primary-action-anticolor);
   background-color: var(--f-primary-action-color);
-  padding: 0.625rem;
+  padding: var(--f-forms-button-padding);
   border-radius: var(--f-forms-button-radius);
   outline: none;
   margin-bottom: var(--f-gutter);
+  text-decoration: none;
+
+  cursor: default;
 
   &:disabled {
       opacity: 0.5;
   }
+}
+
+.no-button, button.no-button {
+  background-color: transparent;
+  color: var(--f-default-text-color);
+  font-family: var(--f-default-text-font);
+
+  cursor: pointer;
 }
