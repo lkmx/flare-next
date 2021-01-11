@@ -30,7 +30,7 @@
     
     // Header default values
     --f-default-headers-font: var(--f-default-text-font);
-    --f-default-headers-weight: 600;
+    --f-default-headers-weight: 800;
     --f-default-headers-color: var(--f-default-text-color);
     --f-default-headers-line: 1.5em;
     --f-default-headers-margin: 0 0 var(--f-gutter) 0;
@@ -38,7 +38,7 @@
     // H1
     --f-h1-text-size: 60px;
     --f-h1-text-font: var(--f-default-headers-font);
-    --f-h1-text-weight: 700;
+    --f-h1-text-weight: var(--f-default-headers-weight);
     --f-h1-text-color: var(--f-default-headers-color);
     --f-h1-text-line-height: var(--f-default-headers-line);
     --f-h1-text-margin: var(--f-default-headers-margin);
@@ -46,7 +46,7 @@
     // H2
     --f-h2-text-size: 40px;
     --f-h2-text-font: var(--f-default-headers-font);
-    --f-h2-text-weight: 700;
+    --f-h2-text-weight: var(--f-default-headers-weight);
     --f-h2-text-color: var(--f-default-headers-color);
     --f-h2-text-line-height: var(--f-default-headers-line);
     --f-h2-text-margin: var(--f-default-headers-margin);
@@ -54,7 +54,7 @@
     // H3
     --f-h3-text-size: 28px;
     --f-h3-text-font: var(--f-default-headers-font);
-    --f-h3-text-weight: 700;
+    --f-h3-text-weight: var(--f-default-headers-weight);
     --f-h3-text-color: var(--f-default-headers-color);
     --f-h3-text-line-height: var(--f-default-headers-line);
     --f-h3-text-margin: var(--f-default-headers-margin);
