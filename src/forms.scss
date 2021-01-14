@@ -60,7 +60,14 @@ button, .button, a.button {
   text-decoration: none;
   text-align: center;
 
+  transition: background-color 0.4s;
+
   cursor: default;
+
+  &:hover {
+    color: var(--f-primary-action-anticolor--hover, var(--f-primary-action-anticolor));
+    background-color: var(--f-primary-action-color--hover, var(--f-primary-action-color));
+  }
 
   &:disabled {
       opacity: 0.5;

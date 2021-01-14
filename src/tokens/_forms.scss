@@ -1,8 +1,14 @@
 
 :root {
     --f-error-color: red;
-    --f-primary-action-color: #00B913;
+
+    --f-primary-action-color: black;
+    --f-primary-action-color--hover: #222222;
+
     --f-primary-action-anticolor: white;
+    --f-primary-action-anticolor--hover: #eeeeee;
+
+
     --f-forms-text-font: var(--f-paragraph-text-font);
     
     --f-forms-radius: 0;
