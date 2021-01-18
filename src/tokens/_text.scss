@@ -27,7 +27,7 @@
     --f-list-item-text-weight: var(--f-paragraph-text-weight);
     --f-list-item-text-color: var(--f-paragraph-text-color);
     --f-list-item-line-height: 1.5em;
-    --f-list-item-margin: 0;
+    --f-list-item-margin: 0 0 var(--f-gutter) 0;
     
     // Header default values
     --f-default-headers-font: var(--f-default-text-font);
