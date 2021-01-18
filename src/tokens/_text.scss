@@ -3,11 +3,12 @@
 :root {
     --f-default-text-color: black;
     --f-default-text-font: "SF Pro Text", "Helvetica Neue", -apple-system, system-ui, Helvetica, Arial, sans-serif;
-    
+    --f-default-text-size: 16px;
+
     --f-text-selection-color: yellow;
     
     // Paragraphs
-    --f-paragraph-text-size: 1rem;
+    --f-paragraph-text-size: var(--f-default-text-size);
     --f-paragraph-text-font: var(--f-default-text-font);
     --f-paragraph-text-weight: normal;
     --f-paragraph-text-color: var(--f-default-text-color);

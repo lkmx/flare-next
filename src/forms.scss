@@ -12,7 +12,7 @@ label {
 
 input, textarea {
   font-family: var(--f-forms-text-font);
-  font-size: 1rem;
+  font-size: var(--f-forms-input-text-size);
   border-color: var(--f-forms-input-border-color);
   border-width: var(--f-forms-input-border-width);
   border-style: solid;
@@ -42,9 +42,12 @@ textarea {
 }
 
 select {
+  font-size: var(--f-forms-input-text-size);
   padding: var(--f-forms-input-padding);
   margin-bottom: var(--f-gutter);
   height: min-content;
+  border-radius: var(--f-forms-input-radius);
+  width: 100%;
 }
 
 button, .button, a.button {
@@ -59,6 +62,8 @@ button, .button, a.button {
   margin-bottom: var(--f-gutter);
   text-decoration: none;
   text-align: center;
+  font-size: var(--f-forms-button-text-size);
+  height: min-content;
 
   transition: background-color 0.4s;
 
