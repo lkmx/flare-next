@@ -65,7 +65,7 @@ button, .button, a.button {
   font-size: var(--f-forms-button-text-size);
   height: min-content;
 
-  transition: background-color 0.4s;
+  transition: background-color 0.4s, color 0.4s;
 
   cursor: default;
 

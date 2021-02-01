@@ -67,7 +67,7 @@ export default {
   updated() {
     this.process();
   },
-  mounted() {
+  created() {
     this.process();
   }
 };

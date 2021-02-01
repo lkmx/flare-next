@@ -249,7 +249,7 @@ let BlockClass = Vue.extend(Block);
 export default {
   // This method processes the mark up passed to the component
   // and adds the anonymous blocks wherever is necessary
-  mounted() {
+  created() {
     this.process();
   },
   updated() {
