@@ -265,67 +265,71 @@ export default {
       }
 
       let block = instanceBlock();
-      for (let i = 0; i < this.$el.children.length; i++) {
-        const node = this.$el.children[i];
-
-        if (node.classList.contains("--flare-block")) {
-          if (block.children[0].children[0].hasChildNodes()) {
-            this.$el.insertBefore(block, node);
-            block = instanceBlock();
-            i++;
+      if(this.$el) {
+        for (let i = 0; i < this.$el.children.length; i++) {
+          const node = this.$el.children[i];
+  
+          if (node.classList.contains("--flare-block")) {
+            if (block.children[0].children[0].hasChildNodes()) {
+              this.$el.insertBefore(block, node);
+              block = instanceBlock();
+              i++;
+            }
+          } else {
+            // If the element is not a block remove it and
+            // append it to the current staging block
+            this.$el.removeChild(node);
+            block.children[0].children[0].appendChild(node);
+            i--;
           }
-        } else {
-          // If the element is not a block remove it and
-          // append it to the current staging block
-          this.$el.removeChild(node);
-          block.children[0].children[0].appendChild(node);
-          i--;
-        }
-        if (block.children[0].children[0].hasChildNodes()) {
-          this.$el.appendChild(block);
+          if (block.children[0].children[0].hasChildNodes()) {
+            this.$el.appendChild(block);
+          }
         }
       }
 
       this.tagBlocks();
     },
-    tagBlocks() {     
-      for (let i = 0; i < this.$el.children.length; i++) {
-        const node = this.$el.children[i];
-        
-        for (let breakpoint in this.numbers) {
-          const colNumber = this.numbers[breakpoint];
-
-          if(colNumber == 2 && (this.weight == "left" || this.weight == "right")) {
-            //console.log(i, this.weight, breakpoint);
+    tagBlocks() {
+      if(this.$el) {
+        for (let i = 0; i < this.$el.children.length; i++) {
+          const node = this.$el.children[i];
+          
+          for (let breakpoint in this.numbers) {
+            const colNumber = this.numbers[breakpoint];
+  
+            if(colNumber == 2 && (this.weight == "left" || this.weight == "right")) {
+              //console.log(i, this.weight, breakpoint);
+            }
+  
+            if(colNumber == 3 && this.weight == "middle") {
+              //console.log(i, this.weight, breakpoint);
+            }
+  
+            if ((i % colNumber) < colNumber / 2) {
+              node.classList.add(`--flare-block--${breakpoint}-left`);
+            }
+  
+            if ((i % colNumber) >=  colNumber / 2) {
+              node.classList.add(`--flare-block--${breakpoint}-right`);
+            }
+  
+            if (colNumber % 2 > 0 && i == Math.floor(colNumber / 2)) {
+              node.classList.remove(`--flare-block--${breakpoint}-left`);
+              node.classList.remove(`--flare-block--${breakpoint}-right`);
+              node.classList.add(`--flare-block--${breakpoint}-middle`);
+            }
+  
+            if (colNumber == 1) {
+              node.classList.remove(`--flare-block--${breakpoint}-left`);
+              node.classList.remove(`--flare-block--${breakpoint}-right`);
+              node.classList.remove(`--flare-block--${breakpoint}-middle`);
+              node.classList.add(`--flare-block--${breakpoint}-single`);
+            } else {
+              node.classList.remove(`--flare-block--${breakpoint}-single`);
+            }
+  
           }
-
-          if(colNumber == 3 && this.weight == "middle") {
-            //console.log(i, this.weight, breakpoint);
-          }
-
-          if ((i % colNumber) < colNumber / 2) {
-            node.classList.add(`--flare-block--${breakpoint}-left`);
-          }
-
-          if ((i % colNumber) >=  colNumber / 2) {
-            node.classList.add(`--flare-block--${breakpoint}-right`);
-          }
-
-          if (colNumber % 2 > 0 && i == Math.floor(colNumber / 2)) {
-            node.classList.remove(`--flare-block--${breakpoint}-left`);
-            node.classList.remove(`--flare-block--${breakpoint}-right`);
-            node.classList.add(`--flare-block--${breakpoint}-middle`);
-          }
-
-          if (colNumber == 1) {
-            node.classList.remove(`--flare-block--${breakpoint}-left`);
-            node.classList.remove(`--flare-block--${breakpoint}-right`);
-            node.classList.remove(`--flare-block--${breakpoint}-middle`);
-            node.classList.add(`--flare-block--${breakpoint}-single`);
-          } else {
-            node.classList.remove(`--flare-block--${breakpoint}-single`);
-          }
-
         }
       }
     },

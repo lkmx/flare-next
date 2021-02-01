@@ -32,6 +32,7 @@ export default {
       // Adjusts the parent page in which the items will be manipulated
       // since, for example, <VueRemarkContent /> introduces an empty div
       if (
+        this.$el &&
         this.$el.children.length == 1 &&
         this.$el.children[0].nodeName.toUpperCase() == "DIV" &&
         this.$el.children[0].classList == 0 && 
@@ -40,26 +41,28 @@ export default {
         page = this.$el.children[0];
       }
       
-      for (let i = 0; i < page.children.length; i++) {
-        const node = page.children[i];
-
-        // if there's a new column starting then the open column
-        // must be closed and appended to the parent page
-        // ...only if the staging column has nodes
-        if (node.classList.contains("--flare-frame")) {
-            if( column.$el.hasChildNodes()) {
-              column.process();
-              page.insertBefore(column.$el, node);
-              column = instanceDefaultFrame();
-              i++;
-            }
-        } else {
-            page.removeChild(node);
-            column.$el.appendChild(node);
-            i--;
-        }
-        if (column.$el.hasChildNodes() && column.$el.children[0].hasChildNodes()) {
-          page.appendChild(column.$el);
+      if(page) {
+        for (let i = 0; i < page.children.length; i++) {
+          const node = page.children[i];
+  
+          // if there's a new column starting then the open column
+          // must be closed and appended to the parent page
+          // ...only if the staging column has nodes
+          if (node.classList.contains("--flare-frame")) {
+              if( column.$el.hasChildNodes()) {
+                column.process();
+                page.insertBefore(column.$el, node);
+                column = instanceDefaultFrame();
+                i++;
+              }
+          } else {
+              page.removeChild(node);
+              column.$el.appendChild(node);
+              i--;
+          }
+          if (column.$el.hasChildNodes() && column.$el.children[0].hasChildNodes()) {
+            page.appendChild(column.$el);
+          }
         }
       }
     },

@@ -1,6 +1,6 @@
 {
   "name": "@lkmx/flare",
-  "version": "0.3.21",
+  "version": "0.3.22",
   "description": "Flare Design System",
   "main": "src/main.js",
   "dependencies": {
