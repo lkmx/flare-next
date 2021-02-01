@@ -252,6 +252,9 @@ export default {
   created() {
     this.process();
   },
+  mounted() {
+    this.process();
+  },
   updated() {
     this.process();
   },
