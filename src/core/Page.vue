@@ -6,11 +6,9 @@
 
 <script>
 import Columns from "./Columns.vue";
-import Block from "./Block.vue";
-import Vue from "vue";
+import { createApp } from 'vue';
 
-const ColumnsClass = Vue.extend(Columns);
-const BlockClass = Vue.extend(Block);
+const ColumnsClass = createApp(Columns);
 
 export default {
   methods: {
@@ -20,7 +18,7 @@ export default {
       // used to avoid having to create VirtualDOM elements.
       function instanceDefaultFrame() {
         const column = new ColumnsClass();
-        column.$mount();
+        column.mount(column.$el);
         return column;
       }
 
@@ -40,11 +38,11 @@ export default {
       ) {
         page = this.$el.children[0];
       }
-      
+
       if(page) {
         for (let i = 0; i < page.children.length; i++) {
           const node = page.children[i];
-  
+
           // if there's a new column starting then the open column
           // must be closed and appended to the parent page
           // ...only if the staging column has nodes

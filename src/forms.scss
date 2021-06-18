@@ -21,7 +21,7 @@ input, textarea {
   outline: none;
   padding: var(--f-forms-input-padding);
   border-radius: var(--f-forms-input-radius);
-  margin-bottom: var(--f-gutter);
+  margin-bottom: var(--f-forms-input-margin);
 
   &[type="text"],
   &[type="email"],

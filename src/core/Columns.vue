@@ -5,37 +5,33 @@
 </template>
 
 <script>
-import Block from "./Block.vue";
-import Vue from "vue";
-
-let BlockClass = Vue.extend(Block);
+import { createApp } from 'vue'
 
 export default {
   // This method processes the mark up passed to the component
   // and adds the anonymous blocks wherever is necessary
   created() {
-    this.process();
+    //this.process();
   },
   mounted() {
-    this.process();
+    //this.process();
   },
   updated() {
-    this.process();
+    //this.process();
   },
 
   methods: {
     process() {
-      function instanceBlock() {
-        const block = new BlockClass();
-        block.$mount();
-        return block.$el;
+      const instanceBlock = () => {
+        const block = createApp(Block);
+        return block
       }
 
       let block = instanceBlock();
       if(this.$el) {
         for (let i = 0; i < this.$el.children.length; i++) {
           const node = this.$el.children[i];
-  
+
           if (node.classList.contains("--flare-block")) {
             if (block.children[0].children[0].hasChildNodes()) {
               this.$el.insertBefore(block, node);
@@ -61,32 +57,32 @@ export default {
       if(this.$el) {
         for (let i = 0; i < this.$el.children.length; i++) {
           const node = this.$el.children[i];
-          
+
           for (let breakpoint in this.numbers) {
             const colNumber = this.numbers[breakpoint];
-  
+
             if(colNumber == 2 && (this.weight == "left" || this.weight == "right")) {
               //console.log(i, this.weight, breakpoint);
             }
-  
+
             if(colNumber == 3 && this.weight == "middle") {
               //console.log(i, this.weight, breakpoint);
             }
-  
+
             if ((i % colNumber) < colNumber / 2) {
               node.classList.add(`--flare-block--${breakpoint}-left`);
             }
-  
-            if ((i % colNumber) >=  colNumber / 2) {
+
+           if ((i % colNumber) >=  colNumber / 2) {
               node.classList.add(`--flare-block--${breakpoint}-right`);
             }
-  
+
             if (colNumber % 2 > 0 && i == Math.floor(colNumber / 2)) {
               node.classList.remove(`--flare-block--${breakpoint}-left`);
               node.classList.remove(`--flare-block--${breakpoint}-right`);
               node.classList.add(`--flare-block--${breakpoint}-middle`);
             }
-  
+
             if (colNumber == 1) {
               node.classList.remove(`--flare-block--${breakpoint}-left`);
               node.classList.remove(`--flare-block--${breakpoint}-right`);
@@ -95,7 +91,7 @@ export default {
             } else {
               node.classList.remove(`--flare-block--${breakpoint}-single`);
             }
-  
+
           }
         }
       }
