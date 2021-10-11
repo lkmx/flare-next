@@ -65,14 +65,5 @@ export default {
       }
     },
   },
-  updated() {
-    this.process();
-  },
-  mounted() {
-    this.process();
-  },
-  created() {
-    this.process();
-  }
 };
 </script>
