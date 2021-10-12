@@ -11,46 +11,17 @@ export default {
   // This method processes the mark up passed to the component
   // and adds the anonymous blocks wherever is necessary
   created() {
-    //this.process();
+    this.process();
   },
   mounted() {
-    //this.process();
+    this.process();
   },
   updated() {
-    //this.process();
+    this.process();
   },
 
   methods: {
     process() {
-      const instanceBlock = () => {
-        const block = createApp(Block);
-        return block
-      }
-
-      let block = instanceBlock();
-      if(this.$el) {
-        for (let i = 0; i < this.$el.children.length; i++) {
-          const node = this.$el.children[i];
-
-          if (node.classList.contains("--flare-block")) {
-            if (block.children[0].children[0].hasChildNodes()) {
-              this.$el.insertBefore(block, node);
-              block = instanceBlock();
-              i++;
-            }
-          } else {
-            // If the element is not a block remove it and
-            // append it to the current staging block
-            this.$el.removeChild(node);
-            block.children[0].children[0].appendChild(node);
-            i--;
-          }
-          if (block.children[0].children[0].hasChildNodes()) {
-            this.$el.appendChild(block);
-          }
-        }
-      }
-
       this.tagBlocks();
     },
     tagBlocks() {
